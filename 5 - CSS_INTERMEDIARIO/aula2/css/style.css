@@ -1,0 +1,21 @@
+p{
+    font-size: 30px;
+    color: green;
+    text-align: justify;
+    font-weight: bold;
+    font-style: italic;
+    /* font-variant: small-caps; */
+    text-transform: lowercase;
+    text-indent: 35px;
+    word-wrap: 5px;
+    line-height: 55px;
+}
+
+a{
+    text-decoration: none;
+    letter-spacing: 10px;
+}
+
+h1{
+    text-shadow: 2px 2px 20px red;
+}
