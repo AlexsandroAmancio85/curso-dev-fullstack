@@ -1,0 +1,73 @@
+
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+
+.container {
+
+    display: flex;
+    justify-content: space-around;
+    
+    .box {
+        width: 30%;
+        color: black;
+        background-color: $color-primary;
+        border-radius: 8px;
+        padding: 20px;
+
+        &.active {
+            background: $color-secondary;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 10px 20px 30px 20px;
+        }
+
+
+
+        p {
+            
+            font-size: 18px;
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        ul {
+            @include reset-list();
+        }
+
+        a {
+            color: green;
+
+            &:hover {
+                color: yellow;
+
+                & + p.hidden {
+                    display: block;
+                }
+            }
+        }
+
+        .sucess{
+            @extend %box-alert;
+            @include bg-effect(sucess);
+        }
+
+        .danger{
+            @extend %box-alert;
+            @include bg-effect(warning);
+        }
+
+
+        .danger{
+            @extend %box-alert;
+            @include bg-effect(danger);
+        }
+    }
+}
